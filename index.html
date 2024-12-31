@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BULB</title>
+    <style>
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: green;
+    width: 100px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    position: fixed;
+    bottom: 120px;
+    left: 550px;
+    border-radius: 1rem;
+   
+}
+img{
+    width: 20%;
+    position: relative;
+    top: 20px;
+    left: 450px;
+}
+        
+    </style>
+</head>
+<body style="background-color: black;">
+    <img id="bulb" src="bulb-off.jpg" alt="bulb off">
+    <button id="btn" class="center">Bulb On</button>
+</body>
+<script>
+let btn=document.getElementById("btn");
+let bulb=document.getElementById("bulb");
+btn.addEventListener("click",mybtn);
+function mybtn(e){
+    if(btn.textContent.includes('On')){
+        bulb.src="bulb-on.avif"; 
+        btn.textContent="Bulb Of";
+    }
+    else{
+        bulb.src="bulb-off.jpg"; 
+        btn.textContent="Bulb On";
+    }
+  
+}
+</script>
+</html>
